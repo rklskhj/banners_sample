@@ -1,0 +1,385 @@
+@import 'lp_variable.styl'
+
+a
+  text-decoration unset
+
+.flex
+  display flex !important
+
+.flex-center
+  align-items center
+
+.wrap
+  flex-wrap wrap
+
+.inline-block
+  display inline-block
+
+.space-between
+  justify-content space-between
+
+.justify-center
+  justify-content center
+
+.align-center
+  align-items center !important
+
+.btn-group-justify-end
+  width 100%
+  display flex
+  justify-content flex-end
+  margin 12px 0
+
+.btn-group-justify-end button:last-child
+  margin-left 4px
+
+.full
+  width 100%
+
+.relative
+  position relative
+
+.lp-valid-error
+  color $negative
+
+.lp-add-img
+  width 80px
+  height 80px
+  background-color white
+  position relative
+  display inline-block
+  margin-right 10px
+  margin-bottom 10px
+  border 1px solid #dbdbdb
+  border-radius 5px
+  box-shadow inset 0 1px 2px rgba(10, 10, 10, 0.1)
+  cursor pointer
+
+.lp-add-img > i
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  color $primary
+
+.lp-package-button
+  border 1px solid #787878
+  color #787878
+  display inline-block
+  padding 4px 16px
+  border-radius 3px
+  margin-right 8px
+  margin-bottom 8px
+  font-size 14px
+  cursor pointer
+
+.package-selected
+  color $primary
+  border 1px solid $primary
+
+.table
+  width 100%
+
+.table th
+.table td
+  text-align center !important
+  vertical-align middle !important
+
+.lp-modal-wrapper
+  padding 1.25rem
+  display block
+
+// Bulma Overlapping Custom Style
+.box
+  box-shadow unset
+  border 1px solid #ccc
+
+.box-item:not(:last-child)
+  padding-bottom 24px !important
+
+.button
+  font-size .9rem !important
+
+.title-group
+  padding-bottom 1rem !important
+  position relative
+
+.tab-head .title-group-tab-closed
+  padding-bottom 0 !important
+  border-bottom 0 !important
+
+.title
+  font-size 1.5rem !important
+  padding-bottom 0 !important
+  margin-bottom 0 !important
+  font-weight 300 !important
+
+.bottom-subtitle
+.subtitle
+  font-size .8rem !important
+  // padding-top 8px !important
+
+.label
+  font-size .9rem !important
+
+.contents .column
+  padding .5rem 0.75rem !important
+
+/*.tab-head
+  display flex !important
+  justify-content space-between !important*/
+
+.tab-head .subtitle
+  margin-top 0 !important
+
+.tab-head .bottom-subtitle
+  margin-top -1.5rem !important
+
+// date picker primary color
+.mx-calendar-content .cell.actived
+  background-color $primary
+
+.mx-panel-date td.today
+  color $primary
+
+
+.sweet-modal.is-alert
+  max-width none
+  max-height 100vh
+  //padding 0 !important
+  /*padding 12px 24px !important*/
+
+.sweet-modal.is-alert .sweet-content
+  text-align left !important
+
+/*.sweet-modal
+  max-width 600px !important
+  max-height 80% !important*/
+
+.sweet-modal-overlay
+  background rgba(24,32,40,0.9) !important
+
+
+.v--modal
+  overflow-y auto !important
+
+.v--modal-overlay
+  z-index 1300
+
+.lp-subtitle-block
+  font-size 0.8rem
+  color #989898
+
+.basic-tab
+  color #787878
+  border 1px solid #c0c0c0
+  padding 8px
+  cursor pointer
+
+.tab-selected
+  color #000000
+  border 1px solid #000000
+  background-color white
+
+.flex-align {
+  display flex
+  align-items center
+}
+.flex-center {
+  display flex
+  align-items center
+  justify-content center
+}
+.flex-end {
+  display flex
+  align-items center
+  justify-content flex-end
+}
+.flex-between {
+  display flex
+  align-items center
+  justify-content space-between
+}
+.grid-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-1 {
+  width: 8.33333%;
+}
+.col-2 {
+  width: 16.6667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6667%;
+}
+.col-12 {
+  width: 100%;
+}
+
+
+
+/*
+* 버튼 css
+*/
+
+.button
+  width 100px
+  height 31.5px !important
+
+.button.half
+  width 50px
+
+.button.is-primary
+  color white
+  background-color $primary !important
+
+.button.text-primary
+  color $primary
+  border 1px solid $primary
+
+.button.is-font
+  color $font
+  border 1px solid $font
+
+.button.is-font:hover
+  border 1px solid #a93e1c
+
+.button.small
+  width fit-content
+  height 27px !important
+
+.button.is-grey
+  color white
+  background-color $grey !important
+
+.button.is-grey-light
+  background-color #e5e5e5
+  color #333333
+
+.button.is-grey.cancel
+  color white
+  background-color $grey !important
+
+.btn-group-justify-end > .button.is-primary
+  margin-left 12px
+
+.input:focus, .input.is-focused, .input:active, .input.is-active, .textarea:focus, .textarea.is-focused, .textarea:active, .textarea.is-active
+  border-color $primary !important
+  box-shadow unset !important
+
+.input
+  height 31.5px
+
+input[readonly]
+  background-color #eee
+
+/*
+  select css
+*/
+/*select
+  background: url(/assets/image/arrow_down.png) no-repeat right !important;
+
+.select:not(.is-multiple):not(.is-loading)::after, .navbar-link::after
+  border 0
+  content unset*/
+
+.select select:focus, .select select.is-focused, .select select:active, .select select.is-active
+  border-color $primary !important
+  box-shadow unset !important
+
+.select:not(.is-multiple):not(.is-loading)::after
+  border-color #000000 !important
+
+.select:not(.is-multiple):not(.is-loading)::after, .navbar-link::after
+  width: 0.4em;
+  height: 0.4em;
+  border: 1px solid transparent;
+  border-top 0
+  border-right 0
+  border-radius 0
+  top 55%
+
+.lp-border-line
+  border-bottom 1px solid #e5e5e5
+  width 100%
+
+.lp-drag-indicator
+  cursor pointer
+  padding 17px 0
+
+.unselect
+  cursor pointer
+  -ms-user-select none
+  -moz-user-select -moz-none
+  -khtml-user-select none
+  -webkit-user-select none
+  user-select none
+
+input[type="number"]
+  border 1px solid #dddddd
+  border-radius 4px
+  padding 4px
+  min-width 48px
+  font-size 1rem
+  text-align right
+
+input[type="number"]:focus
+  outline none
+
+
+// text
+text-danger
+  color #ff3860;
+
+.body-modal-open
+  overflow hidden
+
+
+.modal-style
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+
+td
+  vertical-align middle
+
+
+.form-item-desc
+  color #989898
+  font-size 10px
+  margin-top -5px
+
+.lp-check-group-container
+  display inline-flex
+  flex-wrap wrap
+
+.content table tbody tr:last-child td,
+.content table tbody tr:last-child th
+  border 1px solid #dbdbdb
+  border-bottom 1px solid #dbdbdb !important
+

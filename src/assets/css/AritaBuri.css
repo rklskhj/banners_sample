@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Arita Buri';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/eot/Arita-buriSB.eot),
+  url(../fonts/eot/Arita-buriSB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriSB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriSB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriSB.otf) format('opentype')
+}
+
+
+@font-face {
+  font-family: 'Arita Buri';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/eot/Arita-buriB.eot),
+  url(../fonts/eot/Arita-buriB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriB.otf) format('opentype')
+}
+
+@font-face {
+  font-family: 'Arita Buri-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/eot/Arita-buriSB.eot),
+  url(../fonts/eot/Arita-buriSB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriSB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriSB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriSB.otf) format('opentype')
+}
+
+
+@font-face {
+  font-family: 'Arita Buri-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/eot/Arita-buriB.eot),
+  url(../fonts/eot/Arita-buriB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriB.otf) format('opentype')
+}
+
+@font-face {
+  font-family: 'Arita Buri-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/eot/Arita-buriSB.eot),
+  url(../fonts/eot/Arita-buriSB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriSB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriSB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriSB.otf) format('opentype')
+}
+
+@font-face {
+  font-family: 'Arita Buri-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/eot/Arita-buriB.eot),
+  url(../fonts/eot/Arita-buriB.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/woff/Arita-buriB.woff) format('woff'),
+  url(../fonts/ttf/Arita-buriB.ttf) format('truetype'),
+  url(../fonts/otf/Arita-buriB.otf) format('opentype')
+}

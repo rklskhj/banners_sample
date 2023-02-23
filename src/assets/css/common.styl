@@ -1,0 +1,344 @@
+/* ***********
+  Reset Style
+  ************** */
+html
+  font-size 15px
+  font-family Noto Sans Korean
+
+html, body
+  margin 0
+  padding 0
+  -webkit-overflow-scrolling touch
+
+*
+  box-sizing border-box
+
+ol, ul
+  list-style none
+  padding 0
+  margin 0
+
+input
+  border-radius 0px
+
+input:disabled
+  opacity 1 !important
+
+input:focus
+button:focus
+  outline 0
+
+iframe
+  max-width 100%
+
+.material-icons
+  -webkit-font-feature-settings "liga"
+  font-feature-settings "liga"
+
+.sweet-modal.is-alert .sweet-content
+  padding 24px !important
+
+.sweet-modal .sweet-box-actions .sweet-action-close:hover
+  background-color #dddddd !important
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+  .sweet-modal.is-alert .sweet-content
+    padding-bottom 70px !important
+/* ***********
+  Abbreviated Style (자주쓰는 단축형 스타일)
+  ************** */
+.position-absolute
+  position absolute
+
+.position-relative
+  position relative
+
+.position-fixed
+  position fixed
+
+.flex
+  display flex
+
+.wrap
+  flex-wrap wrap
+
+.flex-1
+  flex 1
+
+.flex-align
+  display flex
+  align-items center
+
+.flex-justify
+  display flex
+  justify-content center
+
+.flex-center
+  display flex
+  align-items center
+  justify-content center
+
+.flex-end
+  display flex
+  align-items center
+  justify-content flex-end
+
+.flex-between
+  display flex
+  align-items center
+  justify-content space-between
+
+.full-width
+  width 100%
+
+.full-height
+  height 100%
+
+.text-center
+  text-align center
+
+.ellipsis
+  text-overflow ellipsis
+  -o-text-overflow ellipsis
+  overflow hidden
+  white-space normal
+  word-wrap normal !important
+  display -webkit-box
+  -webkit-line-clamp 1
+  /* autoprefixer: ignore next */
+  -webkit-box-orient vertical
+  //width 100px // 임시 width (width 지정해주어야 함)
+  //text-overflow ellipsis
+  //-o-text-overflow ellipsis
+  //overflow hidden
+  //white-space nowrap
+  //word-wrap normal !important
+  //display inline-block
+
+.ellipsis-multiple
+  width 100px // 임시 width (width 지정해주어야 함)
+  height 40px // 임시 height (height 지정해주어야 함)
+  text-overflow ellipsis
+  -o-text-overflow ellipsis
+  overflow hidden
+  white-space normal
+  text-align left
+  word-wrap break-word
+  display -webkit-box
+  -webkit-line-clamp 2
+  /* autoprefixer: ignore next */
+  -webkit-box-orient vertical
+
+.unselect
+  cursor pointer
+  -ms-user-select none
+  -moz-user-select -moz-none
+  -khtml-user-select none
+  -webkit-user-select none
+  user-select none
+
+.inline-block
+  display inline-block
+
+.no-decoration
+  text-decoration none
+
+.pre-line
+  white-space pre-line
+
+.object-fit-cover
+  object-fit cover
+.object-fit-contain
+  object-fit contain
+
+.radius-half
+  border-radius 50%
+
+.overflow-hidden
+  overflow hidden
+
+/* ****
+  Font Style - Paragraph  */
+
+.bold
+  font-weight bold
+
+.weight-100
+  font-weight 100
+.weight-200
+  font-weight 200
+.weight-300
+  font-weight 300
+.weight-400
+  font-weight 400
+.weight-500
+  font-weight 500
+.weight-600
+  font-weight 600
+.weight-700
+  font-weight 700
+.weight-800
+  font-weight 800
+.weight-900
+  font-weight 900
+
+.size-9
+  font-size 9px
+.size-10
+  font-size 10px
+.size-11
+  font-size 11px
+.size-12
+  font-size 12px
+.size-13
+  font-size 13px
+.size-14
+  font-size 14px
+.size-15
+  font-size 15px
+.size-16
+  font-size 16px
+.size-17
+  font-size 17px
+.size-18
+  font-size 18px
+.size-19
+  font-size 19px
+.size-20
+  font-size 20px
+.size-21
+  font-size 21px
+.size-22
+  font-size 22px
+.size-23
+  font-size 23px
+.size-24
+  font-size 24px
+.size-25
+  font-size 25px
+.size-26
+  font-size 26px
+.size-27
+  font-size 27px
+.size-28
+  font-size 28px
+.size-29
+  font-size 29px
+.size-30
+  font-size 30px
+.size-31
+  font-size 31px
+.size-32
+  font-size 32px
+.size-33
+  font-size 33px
+.size-34
+  font-size 34px
+.size-35
+  font-size 35px
+.size-36
+  font-size 36px
+.size-37
+  font-size 37px
+.size-38
+  font-size 38px
+.size-39
+  font-size 39px
+.size-40
+  font-size 40px
+
+.margin-bottom-2
+  margin-bottom 2px
+.margin-bottom-4
+  margin-bottom 4px
+.margin-bottom-6
+  margin-bottom 6px
+.margin-bottom-8
+  margin-bottom 8px
+.margin-bottom-10
+  margin-bottom 10px
+.margin-bottom-12
+  margin-bottom 12px
+.margin-bottom-14
+  margin-bottom 14px
+.margin-bottom-16
+  margin-bottom 16px
+.margin-bottom-18
+  margin-bottom 18px
+.margin-bottom-20
+  margin-bottom 20px
+.margin-bottom-22
+  margin-bottom 22px
+.margin-bottom-24
+  margin-bottom 24px
+.margin-bottom-26
+  margin-bottom 26px
+.margin-bottom-28
+  margin-bottom 28px
+.margin-bottom-30
+  margin-bottom 30px
+
+.radius-2
+  border-radius 2px
+.radius-3
+  border-radius 3px
+.radius-4
+  border-radius 4px
+.radius-6
+  border-radius 6px
+.radius-8
+  border-radius 8px
+.radius-10
+  border-radius 10px
+.radius-12
+  border-radius 12px
+.radius-16
+  border-radius 16px
+.radius-20
+  border-radius 20px
+.radius-24
+  border-radius 24px
+.radius-28
+  border-radius 28px
+.radius-32
+  border-radius 32px
+.radius-36
+  border-radius 36px
+.radius-40
+  border-radius 40px
+.radius-circle
+  border-radius 100%
+
+.empty-view
+  padding 80px 0
+  font-size 14px
+  text-align center
+
+/* ***********
+Header Style
+************** */
+
+.header-icon
+  font-size 26px
+
+/* ***********
+Common Style
+************** */
+.lp-editor img
+  width 100%
+
+/* ***********
+Drum js (c-input-time)
+************** */
+div.drum-wrapper div.container, div.drum-wrapper figure
+  text-align center
+
+div.drum-wrapper
+  width 100%
+  font-size 1.1rem
+
+div.drum-wrapper .dial
+  display none !important
+
+.BM-JUA
+  font-family "BM JUA"

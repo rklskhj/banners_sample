@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Thin.woff2) format('woff2'),
+    url(../fonts/woff/Spoqa-Han-Sans-Thin.woff) format('woff'),
+    url(../fonts/ttf/Spoqa-Han-Sans-Thin.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Light.woff2) format('woff2'),
+    url(../fonts/woff/Spoqa-Han-Sans-Light.woff) format('woff'),
+    url(../fonts/ttf/Spoqa-Han-Sans-Light.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Regular.woff2) format('woff2'),
+    url(../fonts/woff/Spoqa-Han-Sans-Regular.woff) format('woff'),
+    url(../fonts/ttf/Spoqa-Han-Sans-Regular.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Bold.woff2) format('woff2'),
+    url(../fonts/woff/Spoqa-Han-Sans-Bold.woff) format('woff'),
+    url(../fonts/ttf/Spoqa-Han-Sans-Bold.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Thin.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Thin.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Thin.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Light.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Light.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Light.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Regular.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Regular.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Regular.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Num';
+  unicode-range: U+0030-0039,U+002C-002E;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Bold.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Bold.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Bold.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Thin.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Thin.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Thin.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Light.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Light.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Light.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Regular.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Regular.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Regular.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Spoqa Han Sans-Alpha';
+  unicode-range: U+0041-007A;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/woff/Spoqa-Han-Sans-Bold.woff2) format('woff2'),
+  url(../fonts/woff/Spoqa-Han-Sans-Bold.woff) format('woff'),
+  url(../fonts/ttf/Spoqa-Han-Sans-Bold.ttf) format('truetype')
+}

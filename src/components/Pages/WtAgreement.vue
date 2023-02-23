@@ -1,0 +1,48 @@
+<template>
+<div>
+  <block-wt-agreement :value="value" @next="$emit('next')" @end="$emit('end')"/>
+</div>
+
+</template>
+<script>
+import BlockWtAgreement from "@/components/Components/Block/BlockWtAgreement/BlockWtAgreement.vue"
+
+export default {
+  name: 'WtAgreement',
+  components: {
+    BlockWtAgreement
+  },
+  mixins: [
+
+  ],
+  props: {
+    value: {
+      type: Object,
+    },
+
+  },
+  data() {
+    return {
+
+    }
+  },
+  created() {
+
+  },
+  mounted() {
+
+  },
+
+  methods: {
+    
+  },
+  computed: {
+    
+  },
+  watch: {
+    
+  }
+}
+</script>
+
+
