@@ -402,7 +402,7 @@ const route_pc = [
                 component: () => import('../components/PagePc/Home.vue'),
             },
             {
-                path: 'benners',
+                path: 'banners',
                 component: () => import('../components/PagePc/Banners.vue'),
             },
 
