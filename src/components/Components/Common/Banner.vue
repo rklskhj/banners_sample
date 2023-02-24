@@ -64,6 +64,7 @@
           :arrowRightStyle="arrowRightStyle"
           :slidesToShowStyle="slidesToShowStyle"
           :customIndicatorStyle="customIndicatorStyle"
+          :customNumIndicatorStyle="customNumIndicatorStyle"
           :customCurrentIndicatorStyle="customCurrentIndicatorStyle"
           :slidesToShow="slidesToShow"
           :centerMode="centerMode"
@@ -72,6 +73,7 @@
           :fullWidth="fullWidth"
           :customWidth="customWidth"
           :arrowHover="arrowHover"
+          :opacity="opacity"
           :dim="dim"
         >
           <template slot="inner">
@@ -173,6 +175,10 @@ export default {
       type: Object,
       required: false,
     },
+      customNumIndicatorStyle: {
+      type: Object,
+      required: false,
+    },
     customCurrentIndicatorStyle: {
       type: Object,
       required: false,
@@ -209,6 +215,10 @@ export default {
       default: 0,
     },
     arrowHover: {
+      type: Boolean,
+      default: false,
+    },
+    opacity: {
       type: Boolean,
       default: false,
     },
@@ -521,13 +531,25 @@ export default {
       return { width: this.fullWidth ? "100%" : this.screenWidth + "px" };
     },
     imageSliderStyle() {
-      if(this.imgRadius) {
+      if(this.imgRadius && this.$store.getters.device === 'pc') {
         return {
-          width: `${this.imageWidth}px`,
+        width: `${this.imageWidth}px`,
         height: `${this.imgBannerHeight + this.imgPaddingTb * 2}px`,
         padding: "40px 80px"
         }
-      }else{
+      }else if(this.imgRadius && this.$store.getters.device === 'mobile' && this.slidesToShow === 1 && this.slidesToShowStyle) {
+        return {
+          width: `${this.imageWidth}px`,
+          height: `${this.imgBannerHeight + this.imgPaddingTb * 2}px`,
+          padding: "12px 0"
+        }
+        }else if(this.imgRadius && this.$store.getters.device === 'mobile') {
+        return {
+        width: `${this.imageWidth}px`,
+        height: `${this.imgBannerHeight + this.imgPaddingTb * 2}px`,
+        padding: "16px"
+        }
+        }else{
         return {
           width: `${this.imageWidth}px`,
           height: `${this.imgBannerHeight + this.imgPaddingTb * 2}px`,
@@ -609,7 +631,6 @@ export default {
         height: this.bannerHeight + "px",
         overflow: "hidden",
         borderRadius: this.imgRadius + "px",
-        padding: "40px 80px"
       };
     },
   },

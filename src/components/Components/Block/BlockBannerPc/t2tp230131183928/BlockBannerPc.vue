@@ -17,6 +17,7 @@
     :slidesToShowStyle="slidesToShowStyle"
     :centerMode="centerMode"
     :variableWidth="variableWidth"
+    :opacity="opacity"
   ></banner>
 </template>
 <script>
@@ -32,6 +33,7 @@ export default {
       vertical: false,
       fullWidth: true,
       indicator: false,
+      opacity: true,
       bannerList: [],
       ratioValue: 2,
       imgPaddingLr: 20,

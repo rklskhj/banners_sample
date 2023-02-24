@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="centerMode === true ? 'block-container' : 'image-slider-container'"
+    :class="slidesToShow === 3 && $store.getters.device === 'pc' && opacity === true ? 'block-container' : 'image-slider-container'"
     @mouseover="arrowHoverhandler(true)"
     @mouseleave="arrowHoverhandler(false)"
   >
@@ -30,11 +30,11 @@
             <!-- 카드뷰 -->
             <div
               class="position-relative"
-              :class="centerMode && slidesToShow === 3 ? 'card-wrapper' : ''"
+              :class="slidesToShow === 3 && $store.getters.device === 'pc'  && opacity === true? 'card-wrapper' : ''"
               v-for="(item, idx) in listData"
               :key="'img-slider-' + idx"
             >
-              <div class="dim" v-if="dim"></div>
+              <div :class="$store.getters.device === 'pc' ? 'dim' : 'm-dim'" v-if="dim"></div>
               <div
                 v-if="item.link && item.link !== ''"
                 :class="{ unselect: item.link && item.link !== '' }"
@@ -55,7 +55,7 @@
                   :isLazy="false"
                   :style="eImageStyle"
                   class="position-relative"
-                  :class="centerMode ? 'card' : ''"
+                  :class="slidesToShow === 3 && $store.getters.device === 'pc' && opacity === true ? 'card' : ''"
                 >
                   <template slot="inner">
                     <slot name="inner"></slot>
@@ -78,7 +78,7 @@
                   :isLazy="false"
                   :style="eImageStyle"
                   class="position-relative"
-                  :class="centerMode ? 'card' : ''"
+                  :class="slidesToShow === 3 && $store.getters.device === 'pc' && opacity === true ? 'card' : ''"
                 >
                   <template slot="inner">
                     <slot name="inner"></slot>
@@ -160,6 +160,27 @@
               </div>
             </div>
           </template>
+          <!-- m_num (0/0) -->
+          <template v-else-if="indicatorType === 'm_num'">
+            <div
+              class="m-num-indicator-container flex-center"
+              :style="numIndicatorStyle"
+              v-if="listData.length > 0 && reRender"
+            >
+              <div
+                v-for="i in Array.from(
+                  { length: listData.length },
+                  (v, k) => k
+                )"
+                :key="'num-' + i"
+              >
+                <div v-if="i === currentSlide">
+                  <span>{{ currentSlide + 1 }}</span>
+                  <span> / {{ listData.length }}</span>
+                </div>
+              </div>
+            </div>
+          </template>
           <!-- dot_num -->
           <template v-else-if="indicatorType === 'dot_num'">
             <div
@@ -194,6 +215,17 @@
             >
               <div :style="barVerticalWrapper">
                 <div :style="currentBarVerticalStyle(currentSlide)"></div>
+              </div>
+            </div>
+          </template>
+          <!-- m_bar_vertical -->
+          <template v-else-if="indicatorType === 'm_bar_vertical'">
+            <div
+              class="m-bar-v-indicator-containe"
+              v-if="listData.length > 1 && reRender"
+            >
+              <div :style="MbarVerticalWrapper">
+                <div :style="currentMBarVerticalStyle(currentSlide)"></div>
               </div>
             </div>
           </template>
@@ -315,7 +347,7 @@ export default {
     },
     indicatorType: {
       type: String,
-      default: "dot", // dot, dot_over, num, dot_num, bar_vertical, bar_horizontal, num_bar_horizontal
+      default: "dot", // dot, dot_over, num, dot_num, bar_vertical, bar_horizontal, num_bar_horizontal / 모바일은 m_ 붙이기
     },
     listData: {
       type: Array,
@@ -422,6 +454,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    opacity: {
+      type: Boolean,
+      default: false,
+    }
   },
 
   data() {
@@ -455,7 +491,7 @@ export default {
           position: "absolute",
           width: "8px",
           height: `${height}px`,
-          backgroundColor: this.brandBgColor.brand.backgroundColor,
+          backgroundColor: this.brandBgColor.white.backgroundColor,
           top: `${index === 0 ? 0 : index * height}px`,
         };
       } else {
@@ -468,6 +504,16 @@ export default {
           top: `${index === 0 ? 0 : index * height}px`,
         };
       }
+    },
+    currentMBarVerticalStyle(index) {
+        let width = 255 / this.listData.length;
+        return {
+          position: "absolute",
+          width: `${width}px`,
+          height: "4px",
+          backgroundColor: this.brandBgColor.brand.backgroundColor,
+          left: `${index === 0 ? 0 : index * width}px`,
+        };
     },
     currentBarVerticalGaugeStyle(index) {
       let height = 120 / this.listData.length;
@@ -686,6 +732,15 @@ export default {
           position: "relative",
         };
       }
+      },
+    MbarVerticalWrapper() {
+        return {
+          width: "255px",
+          height: "4px",
+          backgroundColor: this.brandBgColor.sub.backgroundColor,
+          position: "relative",
+        };
+
     },
     barHorizontalWrapper() {
       if (this.fullWidth === true) {
@@ -816,6 +871,16 @@ export default {
   height: 26px;
   text-align: center;
 }
+.m-num-indicator-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  width: 44px;
+  height: 20px;
+  text-align: center;
+}
 
 .dot-num-indicator-container {
   position: absolute;
@@ -863,6 +928,11 @@ export default {
     border-radius: 100%;
     background-color: white;
   }
+}
+.m-bar-v-indicator-containe {
+  position: absolute;
+  left: 60px;
+  bottom: 16px;
 }
 
 .bar-v-indicator-container {
@@ -942,6 +1012,21 @@ export default {
   position: absolute;
   width: 100%;
   max-height: 180px;
+  height: 100%;
+  bottom: -5px;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.864583) 86.46%,
+    #ffffff 100%
+  );
+}
+.m-dim {
+  position: absolute;
+  width: 100%;
+  max-height: 130px;
   height: 100%;
   bottom: -5px;
   left: 0;

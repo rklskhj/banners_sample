@@ -13,6 +13,8 @@
     :slidesToShowStyle="slidesToShowStyle"
     :arrowRightStyle="arrowRightStyle"
     :arrowLeftStyle="arrowLeftStyle"
+    :customCurrentIndicatorStyle="customCurrentIndicatorStyle"
+    :customIndicatorStyle="customIndicatorStyle"
     :dim="dim"
   ></banner>
 </template>
@@ -57,12 +59,28 @@ export default {
         textShadow: "0px 1px 4px rgba(0, 0, 0, 0.36)",
         left: "61px",
       },
+      customCurrentIndicatorStyle: {
+          width: "8px",
+          height: "8px",
+          borderRadius: "100%",
+          backgroundColor: "",
+          marginRight: "10px",
+      },
+      customIndicatorStyle: {
+        width: "8px",
+          height: "8px",
+          borderRadius: "100%",
+          backgroundColor: "",
+          marginRight: "10px",
+      },
       dim: true,
     };
   },
   created() {
     this.arrowRightStyle.color = this.brandColor.white.color;
     this.arrowLeftStyle.color = this.brandColor.white.color;
+    this.customCurrentIndicatorStyle.backgroundColor = this.brandColor.main.color;
+    this.customIndicatorStyle.backgroundColor = this.brandBgColor.sub.backgroundColor;
   },
   mounted() {},
 

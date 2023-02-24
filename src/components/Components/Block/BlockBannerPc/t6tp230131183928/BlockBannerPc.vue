@@ -15,6 +15,8 @@
     :arrowLeftStyle="arrowLeftStyle"
     :slidesToShow="slidesToShow"
     :centerPadding="centerPadding"
+    :customCurrentIndicatorStyle="customCurrentIndicatorStyle"
+    :customIndicatorStyle="customIndicatorStyle"
   ></banner>
 </template>
 <script>
@@ -69,6 +71,20 @@ export default {
         width: "500px",
         margin: "0 auto",
       },
+      customCurrentIndicatorStyle: {
+          width: "8px",
+          height: "8px",
+          borderRadius: "100%",
+          backgroundColor: "",
+          marginRight: "10px",
+      },
+      customIndicatorStyle: {
+        width: "8px",
+          height: "8px",
+          borderRadius: "100%",
+          backgroundColor: "",
+          marginRight: "10px",
+      },
     };
   },
   created() {
@@ -78,6 +94,9 @@ export default {
     this.arrowLeftStyle.color = this.brandColor.sub.color;
     this.arrowLeftStyle.backgroundColor =
       this.brandBgColor.main.backgroundColor;
+    this.customCurrentIndicatorStyle.backgroundColor = this.brandColor.main.color;
+    this.customIndicatorStyle.backgroundColor = this.brandBgColor.sub.backgroundColor;
+    
   },
   mounted() {},
 

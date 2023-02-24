@@ -178,6 +178,10 @@ const route = [
                 path: 'home',
                 component: () => import('../components/Page/Home.vue'),
             },
+            {
+                path: 'banners',
+                component: () => import('../components/Page/Banners.vue'),
+            },
 
             {
                 path: 'inquiry_reg',
